@@ -1,0 +1,69 @@
+.related {
+    padding: 1rem;
+  
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+  
+      .related-item {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        text-align: center;
+        transition: box-shadow 0.3s;
+  
+        &:hover {
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+  
+        img {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+  
+        h3 {
+          font-weight: 600;
+          margin: 0.5rem 0;
+        }
+  
+        p {
+          font-size: 0.85rem;
+          color: #555;
+          margin-bottom: 0.5rem;
+        }
+  
+        .bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0.5rem;
+  
+          button {
+            background: gold;
+            color: black;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            border: none;
+  
+            &:hover {
+              background: goldenrod;
+            }
+          }
+  
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  

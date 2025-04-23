@@ -1,0 +1,26 @@
+.header {
+    background: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .logo {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+  
+    .menu {
+      a {
+        color: white;
+        margin-left: 1rem;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  

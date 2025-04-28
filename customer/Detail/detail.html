@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="../../asset/sass/style.css">
+  <script>
+    let quantity = 1;
+    function updateQuantityDisplay() {
+      document.getElementById('quantityInput').value = quantity;
+    }
+    function increaseQty() {
+      quantity++;
+      updateQuantityDisplay();
+    }
+    function decreaseQty() {
+      if (quantity > 0) {
+        quantity--;
+        updateQuantityDisplay();
+      } else {
+        alert("Không thể chọn số lượng âm!");
+      }
+    }
+    window.onload = () => {
+      updateQuantityDisplay();
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Ecommerce</div>
+    <div class="menu">
+      <a href="#" class="cart">
+        🛒 <span class="cart-count">2</span>
+      </a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </div>
+  </div>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Men</a>
+    <a href="#">Woman</a>
+    <a href="#">Kid</a>
+    <a href="#">Sport</a>
+  </div>
+  <div class="product-detail">
+    <div class="product-image">
+      <img src="https://via.placeholder.com/200" alt="Product" />
+    </div>
+    <div class="product-info">
+      <h1>Product name</h1>
+      <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
+
+      <div class="size-box">
+        <p>Available size</p>
+        <div class="sizes">
+          <button>38</button>
+          <button>39</button>
+          <button>40</button>
+          <button>41</button>
+          <button>42</button>
+        </div>
+      </div>
+
+      <p class="price">85$</p>
+
+      <div class="actions">
+        <div class="quantity">
+          <button onclick="decreaseQty()">-</button>
+          <input id="quantityInput" type="text" value="1" readonly />
+          <button onclick="increaseQty()">+</button>
+        </div>
+        <button class="add-cart">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="related">
+    <h2>- Relate Product -</h2>
+    <div class="related-grid">
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+  
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+  
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+      <div class="related-item">
+        <img src="https://via.placeholder.com/150" alt="Product" />
+        <h3>Adidas Prophere</h3>
+        <p>short descript ...</p>
+        <div class="bottom">
+          <button>Buy now</button>
+          <span>85$</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="footer-box">
+        <p class="title">GET HELP</p>
+        <p>Contact us</p>
+        <p>Shopping</p>
+        <p>NIKEiD</p>
+        <p>Nike+</p>
+      </div>
+      <div class="footer-box">
+        <p class="title">ORDERS</p>
+        <p>Payment options</p>
+        <p>Shipping and delivery</p>
+        <p>Returns</p>
+      </div>
+      <div class="footer-box">
+        <p class="title">REGISTER</p>
+        <p>Create one account to manage everything you do with Nike, from your shopping preferences to your Nike+ activity.</p>
+        <p class="highlight">Learn more</p>
+      </div>
+    </div>
+    <div class="footer-row gray">
+      <div class="footer-box">
+        <p class="title">EMAIL SIGN UP</p>
+        <p>Be the first to know about new products and special offers.</p>
+        <p class="highlight">Sign up now</p>
+      </div>
+      <div class="footer-box">
+        <p class="title">GIFT CARDS</p>
+        <p>Give the gift that always fits.</p>
+        <p class="highlight">View cards</p>
+      </div>
+      <div class="footer-box">
+        <p class="title">STORES NEAR YOU</p>
+        <p>Locate a Nike retail store or authorized retailer.</p>
+        <p class="highlight">Search</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

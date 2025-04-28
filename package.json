@@ -1,0 +1,13 @@
+{
+  "name": "cyber-soft-shoes",
+  "version": "1.0.0",
+  "description": "Cyber Soft Shoes Website",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass style.scss:style.css --watch",
+    "build": "sass style.scss:style.css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+} 

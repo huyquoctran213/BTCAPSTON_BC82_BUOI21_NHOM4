@@ -17,35 +17,30 @@ body {
 
 // Header styles
 .header {
+    background: black;
+    color: white;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-    &__logo {
-        max-width: 150px;
-        img {
-            width: 100%;
-        }
+  
+    .logo {
+      font-weight: bold;
+      font-size: 1.25rem;
     }
-
-    &__nav {
-        display: flex;
-        gap: 2rem;
-
-        a {
-            text-decoration: none;
-            color: $text-color;
-            font-weight: 500;
-            
-            &:hover {
-                color: $secondary-color;
-            }
+  
+    .menu {
+      a {
+        color: white;
+        margin-left: 1rem;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
         }
+      }
     }
-}
+  }
 
 // Main content
 .main-content {
@@ -313,5 +308,40 @@ body {
         }
     }
 }
+.footer {
+    border-top: 1px solid #ccc;
+  
+    .footer-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 2rem 1rem;
+      background: #ffffff;
+    }
+  
+    .footer-row.gray {
+      background: #f3f3f3;
+    }
+  
+    .footer-box {
+      .title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        margin: 0.25rem 0;
+      }
+  
+      .highlight {
+        color: red;
+        cursor: pointer;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 
 

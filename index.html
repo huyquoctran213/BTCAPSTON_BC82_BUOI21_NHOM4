@@ -7,20 +7,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./asset/sass/style.css">
 </head>
 
 <body>
-    <!-- Register Modal -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -75,119 +69,261 @@
         </div>
     </div>
 
-    <header class="header">
-        <div class="header__logo"
-            style="display: flex; align-items: center; justify-content: space-between; background-color: black; padding: 0 20px;">
-            <img src="./img/9c25bec2c255c800e61e47ec7698ffdc99e50a95.png" alt="Cyber Soft Logo"
-                style="width: 100px; height: auto;">
-            <div class="header-login">
-                <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">Login</a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="text-decoration: none; color: white;">Register</a>
-            </div>
+    <div class="header" style="display:flex; align-items:center; justify-content:space-between; padding:10px 20px; background:#000;">
+        <img src="./asset/img/9c25bec2c255c800e61e47ec7698ffdc99e50a95.png" alt="Cyber Soft Logo" style="width: 100px; height: auto;">
+        <div class="menu">
+          <a href="#" class="cart" style="color:#fff; margin-right:15px; text-decoration:none;">
+            🛒 <span class="cart-count">2</span>
+          </a>
+          <a href="#" style="color:#fff; margin-right:10px; text-decoration:none;">Login</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="text-decoration: none; color: white;">Register</a>
         </div>
-        <nav class="header__nav">
-            <a href="#" style="text-decoration: underline;color: black; margin-right: 10px">Home</a>
-            <a href="#" style="text-decoration: none; color: black; margin-right: 10px">Men</a>
-            <a href="#" style="text-decoration: none; color: black; margin-right: 10px">Woman</a>
-            <a href="#" style="text-decoration: none; color: black; margin-right: 10px">Kid</a>
-            <a href="#" style="text-decoration: none; color: black">Sport</a>
-        </nav>
-    </header>
+      </div>
+    
+      <!-- Navigation -->
+      <nav class="nav" style="padding:10px 20px; background:#f8f9fa;">
+        <a href="index.html" style="margin-right:15px; text-decoration:none; color:#333;">Home</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#333;">Men</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#333;">Woman</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#333;">Kid</a>
+        <a href="#" style="text-decoration:none; color:#333;">Sport</a>
+      </nav>
 
     <main class="main-content">
         <div class="container">
+            <!-- Sản phẩm chính -->
             <div class="product" style="display: flex; align-items: center; padding: 2rem; position: relative;">
                 <div class="product__image" style="flex: 7; width: 70%;">
-                    <img src="./img/19016b7feceeac395b345ee158dadabb89414849.png" alt="Green Sport Shoe" style="max-width: 100%; height: auto;">
+                    <img src="./asset/img/19016b7feceeac395b345ee158dadabb89414849.png" alt="Green Sport Shoe" style="max-width: 100%; height: auto;">
                 </div>
                 <div class="product__info" style="flex: 3; padding: 2rem; width: 30%;">
-                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Product name</h1>
-                    <p style="color: #666; margin-bottom: 2rem;">Product description ...</p>
-                    <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.8rem 2rem; border-radius: 25px; color: white; font-weight: bold; cursor: pointer;">Buy now</button>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Green Sport Shoe</h1>
+                    <p style="color: #666; margin-bottom: 2rem;">A comfortable green sport shoe perfect for daily wear.</p>
+                    <button class="buy-now"
+                        onclick="storeProductDetails(
+                            'Green Sport Shoe',
+                            './asset/img/19016b7feceeac395b345ee158dadabb89414849.png',
+                            'A comfortable green sport shoe perfect for daily wear.',
+                            '100'
+                          )"
+                        style="background-color: #f4b350; border: none; padding: 0.8rem 2rem; border-radius: 25px; color: white; font-weight: bold; cursor: pointer;">
+                        Buy now
+                    </button>
                 </div>
                 <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to right bottom, transparent 49%, #ff0000 50%); z-index: -1;"></div>
             </div>
 
+            <!-- Các sản phẩm Feature -->
             <section class="product-feature">
                 <h2 class="product-feature__title" style="text-align: center; margin-bottom: 2rem;">-Product Feature-</h2>
                 <div class="product-feature__grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
-
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
-
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
-
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
-
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
-
                     <div class="product-feature__item" style="text-align: center;">
-                        <img src="./img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
                         <h3>Adidas Prophere</h3>
                         <div class="product-feature__buttons">
-                            <button class="buy-now" style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">Buy now</button>
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
+                            <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
+                        </div>
+                    </div>
+                    <div class="product-feature__item" style="text-align: center;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <h3>Adidas Prophere</h3>
+                        <div class="product-feature__buttons">
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
+                            <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
+                        </div>
+                    </div>
+                    <div class="product-feature__item" style="text-align: center;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <h3>Adidas Prophere</h3>
+                        <div class="product-feature__buttons">
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
+                            <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
+                        </div>
+                    </div>
+                    <div class="product-feature__item" style="text-align: center;">
+                        <img src="./asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png" alt="Adidas Prophere" style="width: 100%; max-width: 250px;">
+                        <h3>Adidas Prophere</h3>
+                        <div class="product-feature__buttons">
+                            <button class="buy-now"
+                                onclick="storeProductDetails(
+                                    'Adidas Prophere',
+                                    './asset/img/c38feabb799d5aa6f69bed4a46a282456a6ab37e.png',
+                                    'Short descript ...',
+                                    '85'
+                                  )"
+                                style="background-color: #f4b350; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin-right: 1rem;">
+                                Buy now
+                            </button>
                             <span class="price" style="background-color: #ddd; padding: 0.5rem 1rem; border-radius: 5px;">85$</span>
                         </div>
                     </div>
                 </div>
             </section>
+            <footer class="footer">
+                <div class="footer-row">
+                  <div class="footer-box">
+                    <p class="title">GET HELP</p>
+                    <p>Contact us</p>
+                    <p>Shopping</p>
+                    <p>NIKEiD</p>
+                    <p>Nike+</p>
+                  </div>
+                  <div class="footer-box">
+                    <p class="title">ORDERS</p>
+                    <p>Payment options</p>
+                    <p>Shipping and delivery</p>
+                    <p>Returns</p>
+                  </div>
+                  <div class="footer-box">
+                    <p class="title">REGISTER</p>
+                    <p>Create one account to manage everything you do with Nike, from your shopping preferences to your Nike+ activity.</p>
+                    <p class="highlight">Learn more</p>
+                  </div>
+                </div>
+                <div class="footer-row gray">
+                  <div class="footer-box">
+                    <p class="title">EMAIL SIGN UP</p>
+                    <p>Be the first to know about new products and special offers.</p>
+                    <p class="highlight">Sign up now</p>
+                  </div>
+                  <div class="footer-box">
+                    <p class="title">GIFT CARDS</p>
+                    <p>Give the gift that always fits.</p>
+                    <p class="highlight">View cards</p>
+                  </div>
+                  <div class="footer-box">
+                    <p class="title">STORES NEAR YOU</p>
+                    <p>Locate a Nike retail store or authorized retailer.</p>
+                    <p class="highlight">Search</p>
+                  </div>
+                </div>
+              </footer>
         </div>
         <div class="main-content__curve"></div>
     </main>
 
-
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('registerForm');
-            
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                // Get form values
                 const formData = {
                     email: document.getElementById('email').value,
                     password: document.getElementById('password').value,
@@ -195,21 +331,22 @@
                     name: document.getElementById('name').value,
                     phone: document.getElementById('phone').value
                 };
-
-                // Validate passwords match
                 if (formData.password !== formData.passwordConfirm) {
                     alert('Passwords do not match!');
                     return;
                 }
-
-                // Log the form data (replace with your API call)
                 console.log('Form submitted:', formData);
-                
-                // Close modal after successful submission
                 const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
                 modal.hide();
             });
         });
+
+        // Chỉnh sửa: thêm description vào tham số
+        function storeProductDetails(name, image, description, price) {
+            const productDetails = { name, image, description, price };
+            localStorage.setItem('productDetails', JSON.stringify(productDetails));
+            window.location.href = './detail.html';
+        }
     </script>
 </body>
 
